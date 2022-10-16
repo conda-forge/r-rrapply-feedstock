@@ -1,4 +1,4 @@
-{% set version = "1.2.5" %}
+{% set version = "1.2.6" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/rrapply_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/rrapply/rrapply_{{ version }}.tar.gz
-  sha256: 1616056e3dbe80dcd1ed7747bcd7ed92abba94ca725a1759580aa5d2d224bd7c
+  sha256: 4c862964316093d7f4b0b504b2a08bd922168ef1654cd7d238de6828868a5017
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
