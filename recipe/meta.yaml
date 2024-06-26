@@ -1,4 +1,4 @@
-{% set version = "1.2.6" %}
+{% set version = "1.2.7" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/rrapply_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/rrapply/rrapply_{{ version }}.tar.gz
-  sha256: 4c862964316093d7f4b0b504b2a08bd922168ef1654cd7d238de6828868a5017
+  sha256: 31f1b0c12bd4eb4c3d1131e373c5157f9806c0b00c234a07dbdb8500dc741f13
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   rpaths:
     - lib/R/lib/
     - lib/
@@ -22,7 +22,9 @@ build:
 requirements:
   build:
     - {{ compiler('c') }}              # [not win]
+    - {{ stdlib("c") }}                # [not win]
     - {{ compiler('m2w64_c') }}        # [win]
+    - {{ stdlib("m2w64_c") }}          # [win]
     - {{ posix }}filesystem        # [win]
     - {{ posix }}make
     - {{ posix }}sed               # [win]
