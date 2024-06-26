@@ -3,6 +3,7 @@ About r-rrapply-feedstock
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-rrapply-feedstock/blob/main/LICENSE.txt)
 
+
 About r-rrapply
 ---------------
 
@@ -11,6 +12,7 @@ Home: https://jorischau.github.io/rrapply/, https://github.com/JorisChau/rrapply
 Package license: GPL-3.0-only
 
 Summary: The minimal 'rrapply'-package contains a single function rrapply(), providing an extended implementation of 'R'-base rapply() by allowing to recursively apply a function to elements of a nested list based on a general condition function and including the possibility to prune or aggregate nested list elements from the result. In addition, special arguments can be supplied to access the name, location, parents and siblings in the nested list of the element under evaluation. The rrapply() function builds upon rapply()'s native 'C' implementation and requires no other package dependencies.
+
 About r-rrapply
 ---------------
 
@@ -153,7 +155,7 @@ available continuous integration services. Thanks to the awesome service provide
 [CircleCI](https://circleci.com/), [AppVeyor](https://www.appveyor.com/),
 [Drone](https://cloud.drone.io/welcome), and [TravisCI](https://travis-ci.com/)
 it is possible to build and upload installable packages to the
-[conda-forge](https://anaconda.org/conda-forge) [Anaconda-Cloud](https://anaconda.org/)
+[conda-forge](https://anaconda.org/conda-forge) [anaconda.org](https://anaconda.org/)
 channel for Linux, Windows and OSX respectively.
 
 To manage the continuous integration and simplify feedstock maintenance
