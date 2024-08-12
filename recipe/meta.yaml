@@ -1,6 +1,5 @@
 {% set version = "1.2.7" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-rrapply
@@ -13,8 +12,7 @@ source:
   sha256: 31f1b0c12bd4eb4c3d1131e373c5157f9806c0b00c234a07dbdb8500dc741f13
 
 build:
-  merge_build_host: true  # [win]
-  number: 0
+  number: 1
   rpaths:
     - lib/R/lib/
     - lib/
@@ -34,7 +32,6 @@ requirements:
     - r-base
   run:
     - r-base
-    - {{ native }}gcc-libs         # [win]
 
 test:
   commands:
